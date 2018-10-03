@@ -1,11 +1,21 @@
 function angkaPalindrome(num) {
     // you can only write your code here!
-    var len = String(num).length;
-    for (var i = 0; i < len / 2; i++) {
-        if (num[i] !== num[len - 1 - i]) {
-            return false;
-        }
-    } return true;
+    var len = String(num).length
+    var midPoint = len/2
+    var strRes = ''
+
+    if(num >= 9){
+        for (var i = 0; i < midPoint; i++) {
+            if (num[i] !== num[len - 1 - i]) {
+                strRes += num[i]
+                var midInt = Number(num[midPoint]) + 1
+                res = strRes + midInt + strRes
+                return number(res);
+            }
+        } 
+    } else {
+        return num+1
+    }
 }
 
 // TEST CASES
