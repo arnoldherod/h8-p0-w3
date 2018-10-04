@@ -1,13 +1,16 @@
 function perkalianUnik(arr) {
     // you can only write your code here!
-    var result = 0
+
+    var arrResult = []
 
     for (i = 0; i < arr.length; i++) {
-        for (iCounter = 0; iCounter < arr.length && iCounter !== i; iCounter++) {
-            arr.slice([iCounter])
-        }
-    }
-}
+        var result = 1
+        for(inner = 0 ; inner < arr.length ; inner++){
+            if(inner !== i){
+                result *= arr[inner]
+            } 
+        } arrResult.push(result)
+    } return arrResult     
 }
 
 // TEST CASES

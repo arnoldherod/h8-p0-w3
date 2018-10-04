@@ -1,23 +1,26 @@
 function angkaPalindrome(num) {
     // you can only write your code here!
-    var len = String(num).length
-    var midPoint = len/2
-    var strRes = ''
 
-    if(num >= 9){
-        for (var i = 0; i < midPoint; i++) {
-            if (num[i] !== num[len - 1 - i]) {
-                strRes += num[i]
-                var midInt = Number(num[midPoint]) + 1
-                res = strRes + midInt + strRes
-                return number(res);
-            }
-        } 
-    } else {
-        return num+1
+    function isPalindrome(num) {
+        var forward = num.toString();
+        var backward = [];
+        for (i = forward.length ; i >= 0 ; i--) {
+        backward.push(forward[i]);
+        }
+        backward = backward.join('');
+        return forward === backward;
+    }
+       var countUp = num + 1;
+   
+    while (true) {
+        if (isPalindrome(countUp)) {
+        return countUp;
+        } else {
+        countUp += 1;
+        }
     }
 }
-
+    
 // TEST CASES
 console.log(angkaPalindrome(8)); // 9
 console.log(angkaPalindrome(10)); // 11
