@@ -4,23 +4,23 @@ function angkaPalindrome(num) {
     function isPalindrome(num) {
         var forward = num.toString();
         var backward = [];
-        for (i = forward.length ; i >= 0 ; i--) {
-        backward.push(forward[i]);
+        for (i = forward.length; i >= 0; i--) {
+            backward.push(forward[i]);
         }
         backward = backward.join('');
         return forward === backward;
     }
-       var countUp = num + 1;
-   
+    var countUp = num + 1;
+
     while (true) {
         if (isPalindrome(countUp)) {
-        return countUp;
+            return countUp;
         } else {
-        countUp += 1;
+            countUp += 1;
         }
     }
 }
-    
+
 // TEST CASES
 console.log(angkaPalindrome(8)); // 9
 console.log(angkaPalindrome(10)); // 11

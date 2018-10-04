@@ -3,14 +3,14 @@ function perkalianUnik(arr) {
 
     var arrResult = []
 
-    for (i = 0; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
         var result = 1
-        for(inner = 0 ; inner < arr.length ; inner++){
-            if(inner !== i){
+        for (var inner = 0; inner < arr.length; inner++) {
+            if (inner !== i) {
                 result *= arr[inner]
-            } 
+            }
         } arrResult.push(result)
-    } return arrResult     
+    } return arrResult
 }
 
 // TEST CASES
